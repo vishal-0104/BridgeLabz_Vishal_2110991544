@@ -44,6 +44,37 @@ S[i] >= 0, where S[i] is an operand in the expression
 
 # << solution >>
 
+
+def postfix_sol(s)
+  stack = []
+
+  exp = s.split
+
+  exp.each do |val|
+    if val.match?(/\d+/)
+      stack.push(val.to_i)
+    else
+      b = stack.pop
+      a = stack.pop
+
+      case val
+      when '+'
+        stack.push(a+b)
+      when '-'
+        stack.push(a-b)
+      when '*'
+        stack.push(a*b)
+      when '/'
+        stack.push(a/b)
+      end
+    end
+  end
+  stack.pop
+end
+
+
+
 puts "Enter the String"
 s = gets.chomp
 
+puts postfix_sol(s)
