@@ -18,3 +18,6 @@ code added and done assignemt theory
 
 8/12/24 :
 Assignment question done 
+
+9/12/24 :
+self practice questions.
